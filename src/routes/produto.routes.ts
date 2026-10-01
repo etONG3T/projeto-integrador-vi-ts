@@ -1,9 +1,11 @@
 import { Router } from "express";
-import * as controller from "../controllers/produto.controller";
+import { listar, buscarPorId, criar, atualizar, excluir } from "../controllers/produto.controller";
 
 const router = Router();
-router.get("/", controller.listar);
-router.get("/:id", controller.buscarPorId);
-router.post("/", controller.criar);
+router.get("/", listar);
+router.get("/:id", buscarPorId);
+router.post("/", criar);
+router.put("/:id", atualizar);
+router.delete("/:id", excluir);
 
 export default router;

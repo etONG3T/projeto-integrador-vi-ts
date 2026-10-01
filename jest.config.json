@@ -1,0 +1,12 @@
+{
+  "testEnvironment": "node",
+  "testMatch": ["**/test-build/test/**/*.test.js"],
+  "transform": {},
+  "collectCoverage": true,
+  "collectCoverageFrom": ["test-build/src/**/*.js", "!test-build/src/index.js"],
+  "coverageDirectory": "coverage",
+  "coverageReporters": ["text", "html", "json-summary", "lcov"],
+  "coverageThreshold": {
+    "global": { "statements": 91, "branches": 91, "functions": 91, "lines": 91 }
+  }
+}
